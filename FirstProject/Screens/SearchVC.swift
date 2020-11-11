@@ -35,7 +35,6 @@ class SearchVC: UIViewController {
     func createDissmissKeyboardTapGesture() {
            let tap = UITapGestureRecognizer(target: view.self, action: #selector(UIView.endEditing(_:)))
            view.addGestureRecognizer(tap)
-        // ends keyboard display with a tap anywhere else on the screen
        }
     
     @objc func pushFollowerListVC() {
