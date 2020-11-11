@@ -18,7 +18,7 @@ class FPItemInfoVC: UIViewController {
     let actionButton  = FPButton()
     
     var user: User!
-    var delegate: userInfoVCDelegate!
+    weak var delegate: userInfoVCDelegate!
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)

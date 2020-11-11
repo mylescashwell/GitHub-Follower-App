@@ -10,7 +10,7 @@ import UIKit
 
 class FPFollowerItemVC: FPItemInfoVC {
     // Child Class for FPItemInfoVC.swift
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureItems()
@@ -23,7 +23,10 @@ class FPFollowerItemVC: FPItemInfoVC {
     }
     
     override func actionButtonTapped() {
+        guard user.followers != 0 else {
+            presentFPAlertOnMainThread(title: "No Followers", message: "This user has no followers.", buttonTitle: "So sad.")
+            return
+        }
         delegate.didTapGetFollowers(for: user)
     }
-    
 }

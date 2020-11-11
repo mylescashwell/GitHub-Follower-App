@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SafariServices
 
 protocol userInfoVCDelegate: class {
     func didTapGitHubProfile(for user: User)
@@ -24,6 +23,8 @@ class UserInfoVC: UIViewController {
     
     var username: String!
     var itemViews: [UIView] = []
+    
+    weak var delegate: followersListVCDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,11 +75,11 @@ class UserInfoVC: UIViewController {
     
     func configureViewController() {
         view.backgroundColor = .systemBackground
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismssVC))
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
     
-    @objc func dismssVC() {
+    @objc func dismissVC() {
         dismiss(animated: true)
     }
     
@@ -126,14 +127,12 @@ extension UserInfoVC: userInfoVCDelegate {
             presentFPAlertOnMainThread(title: "Invalid URL", message: "The URL attached to this profile is invalid.", buttonTitle: "Ok")
             return
         }
-
-        let safariVC = SFSafariViewController(url: url)
-        safariVC.preferredControlTintColor = .systemGreen
-        present(safariVC, animated: true)
+        presentSafariVC(with: url)
     }
     
     func didTapGetFollowers(for user: User) {
-        //
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
 
     
