@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		741C0AEA25637C04006E7BCE /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C0AE925637C04006E7BCE /* FavoriteCell.swift */; };
 		74510EB6254A03A100E76900 /* Date+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510EB5254A03A100E76900 /* Date+Ext.swift */; };
 		74510EB8254A041F00E76900 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74510EB7254A041F00E76900 /* String+Ext.swift */; };
 		746698A6253AB47F002EF175 /* followerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746698A5253AB47F002EF175 /* followerCell.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		741C0AE925637C04006E7BCE /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		74510EB5254A03A100E76900 /* Date+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Ext.swift"; sourceTree = "<group>"; };
 		74510EB7254A041F00E76900 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		746698A5253AB47F002EF175 /* followerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = followerCell.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				746698A5253AB47F002EF175 /* followerCell.swift */,
+				741C0AE925637C04006E7BCE /* FavoriteCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				747F870C25369161001A24DA /* FPAlertVC.swift in Sources */,
 				74D4EA1C2548FC080091869B /* FPItemInfoView.swift in Sources */,
 				747F87022532ADF4001A24DA /* FPButton.swift in Sources */,
+				741C0AEA25637C04006E7BCE /* FavoriteCell.swift in Sources */,
 				746698A6253AB47F002EF175 /* followerCell.swift in Sources */,
 				747F87042532B339001A24DA /* FPTextField.swift in Sources */,
 				74D4EA0E25479C820091869B /* FPError.swift in Sources */,

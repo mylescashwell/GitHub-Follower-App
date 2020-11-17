@@ -51,11 +51,13 @@ class FPItemInfoVC: UIViewController {
     }
     
     private func configureActionButton() {
-        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+     }
+    
+    @objc func actionButtonTapped() {
+        print("action button tapped")
     }
-    
-    @objc func actionButtonTapped() {}
-    
+        
     private func layoutUI() {
         view.addSubview(stackView)
         view.addSubview(actionButton)
